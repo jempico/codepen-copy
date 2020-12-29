@@ -24,7 +24,7 @@ html {
     grid-auto-flow: column;
     align-items: center;
     color: white;
-    grid-gap: 6px;
+    grid-gap: 10px;
 }
 
 .pen img {
@@ -36,6 +36,8 @@ html {
     display: grid;
     grid-template-columns: 13em 2em; /*Make the h1 responsive*/
     grid-template-rows: 1fr;
+    padding-top: 10px;
+    padding-bottom: 15px;
 }
 .small-button {
     background-color: transparent;
@@ -47,19 +49,44 @@ html {
 
 /*buttons*/
 .button {
-    padding: 10px 5px 10px 5px;
-    border-radius: 2px;
-    background-color: var(--grey);
-    border: none;
+    padding: 10px 16px;
+    border-radius: 4px;
+    border: solid 3px var(--grey);
     color: white;
+    font-size: 1rem;
+    background-color: #1e2025;
+    line-height: 1.2;
+}
+.opaque-btn {
+    background-color: var(--grey);
 }
 
 .multibutton {
-    padding: 6px 5px 6px 5px;
-    background-color: var(--grey);
-    border-radius: 2px;
+    display: flex;
+    border: solid 3px var(--grey);
+    border-radius: 4px;
 
 }
+
+.pinItem {
+    border-radius: 0 !important;
+    border: none;
+}
+
+.seePins {
+    border-radius: 0 !important;
+    border: none;
+
+
+}
+/*.pinItem {
+    padding: 2px 5px 2px 5px;
+    border-radius: 0% !important;
+}
+.seePins {
+    background-color: transparent;
+
+}*/
 iframe {
     width: 100%;
     height: 100%;
@@ -71,6 +98,7 @@ footer {
 
 h1 {
     font-size: 19.5px;
+    font-weight: lighter;
 }
 
 p {
