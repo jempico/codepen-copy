@@ -1,4 +1,4 @@
-As part of WesBos CSS Grid Course, I recreated a web application like codePen from scratch using only CSS Grid.
+As part of WesBos CSS Grid Course, I recreated codePen from scratch using only CSS Grid.
 
 Things I've learned while doing it:
 
