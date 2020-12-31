@@ -14,7 +14,6 @@ html {
     font-weight: normal;
     background-color: #333742;
 
-    /*text-shadow: 0 2px 0 rgba(0, 0, 0, 0.07);*/
 }
 
 /*header*/
@@ -22,8 +21,10 @@ html {
 .pen {
     display: grid;
     background-color: #1e2025;
+    display: grid;
+    /*Using grid-auto-flow in order to push the menu buttons at the end of the "Pen"*/
     grid-template-columns: auto 1fr;
-    grid-auto-flow: column;
+    grid-auto-flow: column; 
     align-items: center;
     color: white;
     grid-gap: 10px;
@@ -33,11 +34,17 @@ html {
     padding: 5px 8px 5px 8px;
 }
 
-
 .pen_details {
+/*Using flexbox to display H1 and Pen icon side by side, no matter the length of H1*/ 
+    min-width: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+/*Using grid to display a two column grid, for H1 and Pen icon to be located in the first row, and the user name in the second row*/
     display: grid;
-    grid-template-columns: 200px 300px; /*Make the h1 responsive*/
-    justify-items: start;
+    grid-template-columns: auto auto;
+    grid-gap: 8px;
     padding-top: 10px;
     padding-bottom: 10px;
 }
@@ -50,6 +57,13 @@ html {
 }
 
 /*header buttons*/
+
+/*Menu button*/
+
+[aria-controls="menu-list"] {
+    display: none;
+}
+
 .button {
     padding: 10px 16px;
     border-radius: 4px;
@@ -60,6 +74,7 @@ html {
     line-height: 1.2;
     text-align: center;
     cursor: pointer;
+    white-space:nowrap;
 }
 .opaque-btn {
     background-color: var(--grey);
@@ -172,17 +187,7 @@ iframe {
     border-radius: 2px;
     text-align: center;
 }
-/*footer {
-    display: block;
-    line-height: 1;
-    height: 30px;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
-    left: 0; 
-    padding: 0 5px;
-    
-#2c303a*/
+ 
 
 .settings {
     display: block;
@@ -193,6 +198,8 @@ iframe {
 h1 {
     font-size: 19.5px;
     font-weight: lighter;
+    white-space: nowrap;
+
 }
 
 p {
